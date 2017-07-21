@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="vue.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <div>{{test}}</div>
+    <div v-component="add-button" >
+
+    </div>
+    <!--<div v-component="add-button"></div>-->
+    <!--<div v-component="add-button"></div>-->
+    <!--&lt;!&ndash;<ul v-component="list" v-with="list2"></ul>&ndash;&gt;-->
+    <!--&lt;!&ndash; v-with="是指要邦定给当前组件的数据"&ndash;&gt;-->
+</div>
+<script>
+    var view = new Vue({
+            el: '#wrap',
+            data:{
+                test:"标题",
+                lists:[{
+                        name:"name1"
+                    },
+                    {
+                        name:"name2"
+                    }]
+            },
+            template: "<add-button></add-button>",
+            components: {
+                "add-button": {
+                    template: "<ul>"
+                               +"<li>1312</li>"
+                              + "</ul>"
+                }
+            }
+    });
+</script>
+</body>
+</html>

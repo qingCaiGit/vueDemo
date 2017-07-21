@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="vue.min.js"></script>
+</head>
+<body>
+    <!--<div id="demo" v-on:click="click">{{message}}</div>-->
+    <div id="demo">
+        <div @click="click">{{message}}</div>
+        <div @click="changeFunc">{{change}}</div>
+    </div>
+    <div id="demoOther" @click="changeFunc">
+        {{change}}
+    </div>
+
+    <script>
+      var demoVM= new Vue({
+            el:"#demo",
+            data:{
+                message:"点击的按钮",
+                change:"修改上面按钮的值"
+            },
+            methods:{
+                click:function(){
+                    console.log("点击输出");
+                    demoVM.$data.message="按钮值改变";
+                },
+                changeFunc:function(){
+                    demoVM.$data.message="有下边按钮的点击改变的";
+                }
+            }
+        });
+
+      var demoOtherVM= new Vue({
+          el:"#demoOther",
+          data:{
+              change:"其他修改上面按钮的值"
+          },
+          methods:{
+              click:function(){
+                  console.log("点击输出");
+                  demoVM.$data.message="按钮值改变";
+              },
+              changeFunc:function(){
+                  demoVM.$data.message="有其他按钮的点击改变的";
+              }
+          },
+          filters:{
+
+          }
+      });
+    </script>
+</body>
+</html>
