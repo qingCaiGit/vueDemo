@@ -1,3 +1,8 @@
+.whole{
+    width:800px;
+    overflow: hidden;
+    margin:30px auto 0;
+}
 .page-bar{
     margin:40px;
 }
@@ -10,9 +15,10 @@ li{
 }
 .page-bar ul{
     overflow: hidden;
+    text-align: center;
 }
 .page-bar li{
-    float: left;
+    display: inline-block;
 }
 .page-bar li:first-child>a {
     margin-left: 0;
@@ -45,4 +51,44 @@ li{
     color: #d44950;
     margin: 0 4px;
     font-size: 12px;
+}
+.projectContent{
+    padding: 20px 50px;
+}
+.baseInfo,.home {
+    width: 481px;
+    margin: 0 auto;
+}
+.baseInfoItem{
+    overflow: hidden;
+}
+.projectContentItem{
+    overflow: hidden;
+    padding-left: 100px;
+}
+.baseInfoItem{
+    width:240px;
+    overflow: hidden;
+    display: inline-block;
+}
+.projectContentItem span,.baseInfoItem span{
+    float:left;
+    width:110px;
+    height: 30px;
+    line-height: 30px;
+}
+.baseInfoItem div{
+    float:left;
+    height:25px;
+    line-height: 25px;
+}
+.baseInfoItem:nth-child(2n){
+    width: 210px;
+    padding-left: 30px;
+}
+.baseInfoItem:nth-child(2n) div{
+    padding-left: 10px;
+}
+.projectContentItem div,.baseInfoItem div{
+    overflow: hidden;
 }

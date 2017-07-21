@@ -4,23 +4,17 @@
     <meta charset="UTF-8">
     <title>vue分页组件和tab组件</title>
     <link   type="text/css" rel="stylesheet" href="demo.css">
-    <link   type="text/css" rel="stylesheet" href="../bower_components/My97DatePicker/skin/default/datepicker.css">
     <script type="text/javascript" src="../jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="../vue.min.js"></script>
-    <script type="text/javascript" src="../bower_components/My97DatePicker/WdatePicker.js"></script>
     <script type="text/javascript" src="page.js"></script>
     <script type="text/javascript" src="tab.js"></script>
     <script type="text/javascript" src="demo.js"></script>
 </head>
 <body>
-<div id="page">
+<div id="page" class="whole">
     <vue-tab :taburl="taburl"  v-on:tab-click="mainDate"></vue-tab>
-    <p  style="height:100px;">{{mainObj.value}}</p>
-
-    <p style="margin-left:40px;">{{msg}}</p>
-    <vue-nav  :all="all"  :cur="cur"   v-on:btn-click="listenDate" v-if="all>1"></vue-nav>
-    <input type="text" id="date1"    style="width:185px;height:35px;line-height:35px;border: 1px solid #ccc;"
-           onClick="WdatePicker({el:this.id,dateFmt:'yyyy-MM-dd'})">
+    <div  style="min-height:650px;" v-html="mainObjValue"></div>
+    <vue-nav  :all="all" :cur="cur"    v-on:btn-click="listenDate"></vue-nav>
 </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 /**
  * Created by caiqing on 2017/7/19.
  */
-var barHtml = '<div class="page-bar">'+
+var barHtml = '<div class="page-bar" v-if="all>1">'+
     '<ul>'+
     '<li v-if="cur>1"><a v-on:click="cur--,pageClick()">上一页</a></li>'+
     '<li v-if="cur==1"><a class="banclick">上一页</a></li>'+
