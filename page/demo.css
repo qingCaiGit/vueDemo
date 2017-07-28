@@ -77,6 +77,17 @@ li{
     height: 30px;
     line-height: 30px;
 }
+.baseInfoItemEntertainment span{
+    float:left;
+    width:200px;
+    height: 30px;
+    line-height: 30px;
+}
+.baseInfoItemEntertainment div{
+   overflow: hidden;
+    line-height: 30px;
+
+}
 .baseInfoItem div{
     float:left;
     height:25px;
